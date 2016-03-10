@@ -15,6 +15,8 @@ def A(x, y)
   else
     $mem[[x, y]] = A(x - 1, A(x, y - 1))
   end
+
+  return $mem[[x, y]]
 end
 
 def prime?(n)
