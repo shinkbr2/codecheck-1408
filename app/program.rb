@@ -4,6 +4,8 @@ def A(x, y)
   # 関数Aを作成する．
   # 返り値は整数
 
+  p x, y
+
   if x == 0
     return y + 1
   elsif y == 0
