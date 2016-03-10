@@ -1,19 +1,19 @@
 require 'prime'
 
-mem = {}
+$mem = {}
 
 def A(x, y)
   # 関数Aを作成する．
   # 返り値は整数
 
-  return mem[[x, y]] unless mem[[x, y]].nil?
+  return $mem[[x, y]] unless $mem[[x, y]].nil?
 
   if x == 0
-    mem[[x, y]] = y + 1
+    $mem[[x, y]] = y + 1
   elsif y == 0
-    mem[[x, y]] = A(x - 1, 1)
+    $mem[[x, y]] = A(x - 1, 1)
   else
-    mem[[x, y]] = A(x - 1, A(x, y - 1))
+    $mem[[x, y]] = A(x - 1, A(x, y - 1))
   end
 end
 
